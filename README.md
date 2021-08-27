@@ -1,5 +1,5 @@
-# dapr-zeebe-example
-This project is an example of using the [Zeebe] JobWorker input binding for [Dapr] microservices.
+# Dapr Zeebe Example
+This project is an example of using the Zeebe JobWorker input binding for Dapr microservices.
 
 ## Requirements
 
