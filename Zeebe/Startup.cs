@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace dapr_zeebe_example
+namespace Zeebe
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace dapr_zeebe_example
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "dapr_zeebe_example", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Zeebe", Version = "v1" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace dapr_zeebe_example
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "dapr_zeebe_example v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Zeebe v1"));
             }
 
             app.UseHttpsRedirection();

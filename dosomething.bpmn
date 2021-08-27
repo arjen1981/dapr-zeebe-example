@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0bgpg8a" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.9.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="1.0.0">
-  <bpmn:collaboration id="Collaboration_0m7pxiu">
+  <bpmn:collaboration id="Collaboration_DoSomething">
     <bpmn:participant id="Participant_0trmy9f" processRef="Process_0ut9z33" />
   </bpmn:collaboration>
   <bpmn:process id="Process_0ut9z33" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>Flow_0d7bowb</bpmn:outgoing>
     </bpmn:startEvent>
-    <bpmn:sequenceFlow id="Flow_0d7bowb" sourceRef="StartEvent_1" targetRef="Activity_1a3dqj5" />
-    <bpmn:sequenceFlow id="Flow_03hr5o4" sourceRef="Activity_1a3dqj5" targetRef="Event_138stsq" />
+    <bpmn:sequenceFlow id="Flow_0d7bowb" sourceRef="StartEvent_1" targetRef="Activity_DoSomething" />
+    <bpmn:sequenceFlow id="Flow_03hr5o4" sourceRef="Activity_DoSomething" targetRef="Event_138stsq" />
     <bpmn:endEvent id="Event_138stsq">
       <bpmn:incoming>Flow_03hr5o4</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:serviceTask id="Activity_1a3dqj5" name="DoSomething">
+    <bpmn:serviceTask id="Activity_DoSomething" name="DoSomething">
       <bpmn:extensionElements>
         <zeebe:taskDefinition type="dosomething" retries="1" />
       </bpmn:extensionElements>
@@ -22,7 +22,7 @@
   </bpmn:process>
   <bpmn:message id="Message_145yhnq" name="Message_3627nj1" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0m7pxiu">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_DoSomething">
       <bpmndi:BPMNShape id="Participant_0trmy9f_di" bpmnElement="Participant_0trmy9f" isHorizontal="true">
         <dc:Bounds x="129" y="77" width="841" height="593" />
       </bpmndi:BPMNShape>
@@ -40,7 +40,7 @@
       <bpmndi:BPMNShape id="Event_138stsq_di" bpmnElement="Event_138stsq">
         <dc:Bounds x="592" y="159" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_05ecl5j_di" bpmnElement="Activity_1a3dqj5">
+      <bpmndi:BPMNShape id="Activity_05ecl5j_di" bpmnElement="Activity_DoSomething">
         <dc:Bounds x="360" y="137" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
