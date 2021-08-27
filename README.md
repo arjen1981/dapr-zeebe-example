@@ -48,5 +48,5 @@ The following Tools can be used:
 
 | Tool                   | URI                                   |
 |------------------------|---------------------------------------|
-| Zeebe Operate          | http://localhost:8082                 |
+| Zeebe Operate          | http://localhost:8080                 |
 | Camunda Modeler        | https://camunda.com/download/modeler/ |
